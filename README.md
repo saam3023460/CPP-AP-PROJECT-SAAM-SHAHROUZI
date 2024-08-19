@@ -1,7 +1,9 @@
 # cpp-project
 
-***
+---
+
 # part1:
+
 # Single Pointer and Double Pointer Vector performance comparison
 
 ## Overview
@@ -20,7 +22,8 @@ This part compares the performance of two custom vector implementations in C++. 
 Both vectors get instantiated with 100 shape objects that each allocate 1 megabyte worth of memory. Then the program performs several insertion operations at the first index(which is the worst case scenario due to shifting) of the vectors. Same process happens with the remove function at index 0(which again is the worst case scenario) and the average insertion and removal times get printed to the console.
 
 ## Results:
-![res](Part1/result1.png)
+
+![res](Part1/result.png)
 
 Double Pointer Vector performs noticably faster than Single Pointer Vector(visual studio code).
 
@@ -29,6 +32,7 @@ Double Pointer Vector performs noticably faster than Single Pointer Vector(visua
 Double Pointer Vector is a vector of addresses pointing toward some objects rather than the objects themselves which is how the Single Pointer Vector operates. This change of design reflects on the time taken to perform an insert and/or remove operation as it only shifts addresses and not actual objects which can be(and in this case "are")quit large to be copied or even be moved.
 
 # part2:
+
 # Calculating physical attributes of nested Device/Shape objects
 
 ## Overview
@@ -41,14 +45,14 @@ This part tries to model a realistic device object that is made up of both simpl
 - **`shape.h`** Extends 2D `Poly` objects into 3D via a height and a density parameter and calculates their surface area, volume and mass.
 - **`device.h`** Uses two vectors of types `Shape` and `Device` to store both shapes and sub-devices. It also utalizes several functions to compute the physical attributes of the main device.
 
-
-
 #### Key Functions
 
 - **`double mass()`**
+
   - Computes the total mass of the device based on shape and device properties.
 
 - **`double volume()`**
+
   - Computes the total volume of the device based on shape and device properties.
 
 - **`double surface()`**
@@ -100,8 +104,5 @@ int main() {
 
     std::cout << d2.mass() << std::endl    // printing total mass to console
 ```
-
-
-
 
 +compiled files for windows are available in the folders
