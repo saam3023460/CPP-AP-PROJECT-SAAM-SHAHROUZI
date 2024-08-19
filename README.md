@@ -25,7 +25,7 @@ Both vectors get instantiated with 100 shape objects that each allocate 1 megaby
 
 ![res](Part1/result.png)
 
-Double Pointer Vector performs noticably faster than Single Pointer Vector(visual studio code).
+Double Pointer Vector performs noticably faster than Single Pointer Vector(visual studio).
 
 ## Interpretation
 
